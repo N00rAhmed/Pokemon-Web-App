@@ -4,7 +4,7 @@ import '../styles/start.css';
 import {BrowserRouter as Routes, Route, Router} from 'react-router-dom';
 import App from '../App.js';
 import { useNavigate } from "react-router-dom";
-
+import Pikachu from '../Pikachu.gif';
 import pokiball from '../pokiball.png';
 // import ball from '../ball.jpg';
 import pixel from '../pixel.jpg';
@@ -15,6 +15,7 @@ function Start() {
     <div>
       <Container>
       <div className='background'>
+        <Gif><img src={Pikachu} alt='a' /></Gif>
           <Button onClick={() => navigate('./Home')}>
                   Start
                   {/* <div className='ball'>
@@ -37,6 +38,34 @@ function Start() {
 const Container = styled.div`
 // background-color: blue;
 `;
+
+const Gif = styled.div`
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+margin-top:376px;
+// margin-left:60px;
+margin-right:20px;
+// background-color:blue;
+
+
+@media screen and (max-width: 850px) {
+  img{
+    width:200px;
+    margin-left:60px;
+
+  }
+}
+
+// max-width: 480px
+
+// @media screen and (min-width: 850px) {
+//   img{
+//     width:250px;
+//   }
+// }
+`
 
 const Button = styled.div`
 

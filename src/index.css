@@ -18,11 +18,23 @@ code {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 1%;
-  margin-right: 77%;
-  /* padding-left: 80%; */
-  background-color: orangered;
+  padding: 1.5rem 0 ;
+  /* background-color: yellow; */
+  margin: 0.3rem;
+  /* border-radius: 0.2rem; */
+  text-align: center;
+  align-items: center;
+  /* width: 190px; */
+  padding-left: 120px;
+  padding-right: 120px;
 }
+
+input{
+  text-align: center;
+  align-items: center;
+  float: right;
+}
+
 
 .rock {
   background-color: rgb(148, 81, 81);
@@ -68,17 +80,23 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 .all-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  /* padding-left: 10%; */
+  /* padding-right: 10%; */
+
+  /* margin-top:10vh; */
+
+  /* padding-top: 10%; */
   /* justify-content: space-between; */
   /* padding-top: 10%; */
   /* padding-left: 15%; */
   /* padding-right: 15%; */
-  
   /* background-color: #444; */
 
 }
@@ -95,6 +113,13 @@ code {
   text-align: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
 }
+
+.thumb-container:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
 h3 {
   margin-bottom: 0.2rem;
 }
@@ -104,8 +129,12 @@ h3 {
   background-color: rgba(255,255,255,0.3);
 }
 .thumb-container img {
-  width: 120px;
-  height: 120px;
+  /* width: 120px; */
+  /* height: 120px; */
+
+  width: 140px;
+  height: 140px;
+  /* background-color: yellow; */
 }
 .thumb-container small {
   text-transform: capitalize;
@@ -134,12 +163,14 @@ h3 {
   padding: 0.5rem 1.5rem;
   min-width: 100%;
   margin-top: 1rem;
+  
 }
 
 .load-more:hover{
   color: black;
   cursor: pointer;
 }
+
 
 /* .input-field{
   margin-bottom: 50%;

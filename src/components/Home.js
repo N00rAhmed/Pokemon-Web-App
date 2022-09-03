@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import Tabs from './Tabs.js';
 import PokimonThumbnails from './PokimonThumbnails';
 import axios from 'axios';
 
@@ -7,13 +8,15 @@ function Home() {
   const navigate = useNavigate();
   const [allPokimons, setAllPokimons] = useState([])
   const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon/?limit=1007')
+  // limit-28
+  // limit-1007
   // const [q, setQ] = useState("");
   // const [searchParam] = useState(['name']);
   const [searchTitle, setSearchTitle] = useState("");
 
-  const handleSearchChange = (e) => {
-    setSearchTitle(e.target.value);
-  };
+  // const handleSearchChange = (e) => {
+  //   setSearchTitle(e.target.value);
+  // };
 
   const getAllPokimons = async () => {
     const res = await fetch(loadMore)
@@ -24,15 +27,16 @@ function Home() {
 
     function createPokimonObject (result) {
       result.forEach(async (pokimon)=> {
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokimon.name}`)
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokimon.name}`);
         const data = await res.json()
-        
+
         setAllPokimons(currentList => [...currentList, data])
         
       });
     }
     createPokimonObject(data.results)
     await console.log(allPokimons)
+    console.log(loadMore);
 
   }
 
@@ -43,10 +47,6 @@ function Home() {
   
   return (
     <div>
-
-      <div className='pokemon container'>
-
-        <div className='all-container'>
           <div className='input-field'>            
             <input
             style= {{ width: "100%", height: "30px" }}
@@ -54,9 +54,13 @@ function Home() {
             placeholder="Search..."
             onChange={(e) => setSearchTitle(e.target.value)}
             />
-
           </div>
-          
+          <Tabs />
+      <div className='pokemon container'>
+
+        <div className='all-container'>
+
+
           {allPokimons.filter((value) => {
             if(searchTitle === '') {
               return value;
@@ -65,14 +69,22 @@ function Home() {
               return value;
             }
           })
+          
+
           .map((pokimon, index) =>
+            
             <PokimonThumbnails
             id={pokimon.id}
             name={pokimon.name}
-            image={pokimon.sprites.other.dream_world.front_default}
+            image={pokimon.sprites.front_default}
+            
+            // pokimon.sprites.other.dream_world.front_default
+            // pokimon.sprites.front_default
+            
             type={pokimon.types[0].type.name}
             key={index}
             />
+
             )}
 
         </div>

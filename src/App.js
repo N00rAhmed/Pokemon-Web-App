@@ -2,6 +2,8 @@ import './App.css';
 import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
 import Home from './components/Home.js';
 import Start from './components/Start.js';
+import Tabs from './components/Tabs.js';
+
 function App() {
   return (
     <div className="App">
@@ -9,10 +11,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Start />} />
           <Route path='/Home' element={<Home />} />
-
+          <Route path='/Tabs' element={<Tabs />} />
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 };
