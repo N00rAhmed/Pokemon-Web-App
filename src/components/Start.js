@@ -9,6 +9,8 @@ import pokiball from '../pokiball.png';
 // import ball from '../ball.jpg';
 import pixel from '../pixel.jpg';
 
+// CREATE USER AUTH FUNCTIONALITY USING FIREBASE
+
 function Start() {
   const navigate = useNavigate();
   return (
@@ -21,7 +23,6 @@ function Start() {
                   {/* <div className='ball'>
                 <img src={pokiball} alt='ball' />
               </div> */}
-
               </Button>
 
               {/* <div className='ball'>
@@ -49,12 +50,13 @@ margin-top:376px;
 margin-right:20px;
 // background-color:blue;
 
-
 @media screen and (max-width: 850px) {
   img{
     width:200px;
+    // width:150px;
+    padding-left:0px;
     margin-left:60px;
-
+    // background-color:white;
   }
 }
 

@@ -21,10 +21,10 @@ function Tabs() {
             <a onClick={() => navigate('/Home')}>
             <SearchIcon style={{ height: "50px", width: "80px"}}/>
             </a>
-            <a>
+            <a onClick={() => navigate('/Fight')}>
               <SportsMmaIcon style={{ height: "50px", width: "80px"}} />
             </a>
-            <a>
+            <a onClick={() => navigate('/Profile')}>
               <BsPerson style={{ height: "50px", width: "80px"}}/>
             </a>
           </div>
