@@ -1,0 +1,41 @@
+.Container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;    
+    /* background-color: aqua; */
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 30px;
+    height:200px;
+    width:200px;
+    background-color:blue;
+}
+
+.featured{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.all-tabs{
+    display: flex;
+    justify-content: center;
+
+}
+
+.all-text{
+    display: flex;
+    justify-content: center;
+
+}
+
+.lickes{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}

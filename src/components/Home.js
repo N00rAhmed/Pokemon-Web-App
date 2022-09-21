@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import Tabs from './Tabs.js';
+import InfoPage from './InfoPage';
 import PokimonThumbnails from './PokimonThumbnails';
 import axios from 'axios';
 
@@ -44,6 +45,8 @@ function Home() {
       getAllPokimons()
   }, [])
 
+  const getPokemonCard = (pokemonId) => {
+    const { id, name, sprite } = allPokimons[pokemonId];}
   
   return (
     <div>
@@ -57,6 +60,7 @@ function Home() {
           </div>
           <Tabs />
       <div className='pokemon container'>
+{/* onClick={() => navigate('/infoPage')} */}
 
         <div className='all-container'>
 
@@ -84,7 +88,11 @@ function Home() {
             type={pokimon.types[0].type.name}
             key={index}
             />
-
+        
+            // focus on sending api data from here to mongodb on click and GET data to display on collection page
+            // do this step by step
+            // first step is to onclick to send that data to db
+            // then GET and redirect
             )}
 
         </div>

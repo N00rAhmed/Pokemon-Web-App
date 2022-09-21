@@ -9,4 +9,6 @@ function Fight() {
   )
 }
 
+// use whole tutorial from youtube to make this part
+
 export default Fight

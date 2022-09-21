@@ -8,23 +8,12 @@ import Pikachu from '../Pikachu.gif';
 import pokiball from '../pokiball.png';
 // import ball from '../ball.jpg';
 import pixel from '../pixel.jpg';
-import { auth, provider } from './firebase';
-
+import InfoPage from './InfoPage.js'
 // import { auth, signInWithGoogle } from './firebase';
 
 // CREATE USER AUTH FUNCTIONALITY USING FIREBASE
 
 function Start(props) {
-
-  const handleAuth = () => {
-    auth.signInWithPopup(provider)
-    .then((result) => {
-      console.log(result);
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
-  };
 
   const navigate = useNavigate();
   
@@ -34,7 +23,6 @@ function Start(props) {
       <div className='background'>
         <Gif><img src={Pikachu} alt='a' /></Gif>
         <Button onClick={() => navigate('./Home')}>
-          {/* <Button onClick={handleAuth}> */}
             Start
           </Button>
 
